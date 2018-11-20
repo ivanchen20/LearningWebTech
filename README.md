@@ -3,6 +3,7 @@
 
 Html + CSS + Bootstrap + Javascript + Skrollr
 
+> 用Github.io呈現網頁
 
-
-用Github.io呈現網頁
+- [Personal Page](https://ivanchen20.github.io/public_html)
+- [Up](https://ivanchen20.github.io/public_html/Up)
