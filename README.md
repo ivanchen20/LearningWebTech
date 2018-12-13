@@ -7,4 +7,4 @@ Html + CSS + Bootstrap + Javascript + Skrollr
 
 - [Personal Page](https://ivanchen20.github.io/public_html)
 - [Up](https://ivanchen20.github.io/public_html/Up)
-- [Reddit](/json_card)
+- [Reddit](/LearningWebTech/json_card.html)
