@@ -60,6 +60,7 @@
             color: aliceblue;
             text-align: right;
             opacity: 0.7;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
         i{
             color: brown;
@@ -72,18 +73,20 @@
     <div id="hint" class="text-right position-fixed">
         <h6 class="card-title" data-spy="affix" data-offset-top="0">Choose Subreddits you like.</h6>
         <select id="myselect" onchange="change_myselect(this.value)">
-            <option value="funny">funny</option>
-            <option value="popular">popular</option>
-            <option value="dataisbeautiful">dataisbeautiful</option>
-            <option value="earthporn">earthporn</option>
-            <!--
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
--->
+            
+            <option value="gifs">gifs</option>
+            <option value="funny">Funny</option>
+            <option value="popular"><b>POPULAR</b></option>
+            <option value="dataisbeautiful">Dataisbeautiful</option>
+            <option value="earthporn">EarthPorn</option>
+            
+            <option value="aww">aww</option>
+            <option value="pics">Pics</option>
+            <option value="mildlyinteresting">MildlyInteresting</option>
+            <option value="food">Food</option>
+            <option value="getmotivated">GetMotivated</option>
+            <option value="showerthoughts">ShowerThoughts</option>
+
         </select>
         <button>show</button>
     </div>
@@ -100,7 +103,7 @@
         </div>
     </div>
     <script>
-        var subr = "funny";
+        var subr = "gifs";
         var post;
 
         function basename(path) {
@@ -109,7 +112,6 @@
 
         function change_myselect(opt) {
             subr = opt;
-            console.log(subr);
             $.getJSON("https://www.reddit.com/r/" + subr + "/top.json", function(data) {
                 post = data.data.children;
                 //                console.log(post.length);
@@ -121,7 +123,7 @@
             console.log("Ivan Chen's Website is loaded");
             var folder = "collection/test";
 
-            $.getJSON("https://www.reddit.com/r/" + subr + "/top.json", function(data) {
+            $.getJSON("https://www.reddit.com/r/" + subr + "/top.json?limit=50", function(data) {
                 post = data.data.children;
                 //                console.log(post.length);
                 //                console.log(post[0].data.url);                
