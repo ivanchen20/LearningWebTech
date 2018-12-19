@@ -141,7 +141,7 @@
                 for (p = 1; p < post.length; p++) {
                     console.log(post[p].data.url);
                     $(".card-columns").append(
-                        "<div class='card'><img class='card-img' src='" + post[p].data.url + "'><div class='card-img-overlay'><h5>"+post[p].data.subreddit+"</h5></div><h6 id='card-text'>" + post[p].data.title + "</h6><p><i class='fa'>&#xf087;</i> "+ post[p].data.ups +" <i class='fa'>&#xf075;</i> <b>"+post[p].data.num_comments+"</b></p></div>");
+                        "<div class='card'><img class='card-img' src='" + post[p].data.url + "'><div class='card-img-overlay'><h5>"+post[p].data['subreddit']+"</h5></div><h6 id='card-text'>" + post[p].data.title + "</h6><p><i class='fa'>&#xf087;</i> "+ post[p].data.ups +" <i class='fa'>&#xf075;</i> <b>"+post[p].data.num_comments+"</b></p></div>");
                 }
             });
 
