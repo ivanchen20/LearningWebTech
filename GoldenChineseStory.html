@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>台語源流</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="asset/css/main.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/font.css">
+    <!-- environment -->
+    <style>
+        #mySVG {
+            position: fixed;
+            top: 0%;
+            width: 40vw;
+            height: 100vh;
+        }
+
+        #jiang-hue {
+            min-height: 2000px;
+        }
+
+        section {
+            min-height: 4000px;
+        }
+
+        #title {
+            /*            font-size: 200px;*/
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+
+    <div id="time_line"></div>
+
+    <section id="start">
+        <div class="full">
+            <div id="cover">
+                <t id="title" class="shining">台語淵流與發展</t>
+            </div>
+        </div>
+    </section>
+    <section id="history">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6">
+                <p>測試文字：設計的訣竅：用戶體驗、業界做法（評估、分析）；面試產品經理，所問的問題（背後的邏輯？）Taipei 101 改版設計，找出3個可優化之處。問出經驗：專業的三個角度（用戶、數據、設計）不要直接跳到那個題目去做！！直接回答3個就慘了。用戶通常說他想做什麼，但她不太理解其實。</p>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3"></div>
+        </div>
+    </section>
+    <section id="compare">
+        
+    </section>
+
+<!--to be added-->
+    <section id="singer">
+
+    </section>
+
+    <footer id="frame">
+        <div class="frame-top"></div>
+        <div class="frame-down"></div>
+    </footer>
+
+    <script>
+        // Get the id of the <path> element and the length of <path>
+        var triangle = document.getElementById("triangle");
+        var length = triangle.getTotalLength();
+
+        // The start position of the drawing
+        triangle.style.strokeDasharray = length;
+
+        // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+        triangle.style.strokeDashoffset = length;
+
+        //
+        var face = document.getElementById("face");
+        var length2 = face.getTotalLength();
+        face.style.strokeDasharray = length2;
+        face.style.strokeDashoffset = length2;
+        //
+
+        var others = document.getElementById("others");
+
+        // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+        window.addEventListener("scroll", myFunction);
+
+        function myFunction() {
+            //            var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            var jtop = $("#jiang-hue").offset().top;
+            var jheight = $("#jiang-hue").height();
+
+            var scrolled = $(window).scrollTop();
+            var scrollpercent = (scrolled - jtop) / jheight;
+            console.log(scrollpercent);
+
+            var draw = length * scrollpercent;
+            var draw2 = length2 * scrollpercent;
+
+            // Reverse the drawing (when scrolling upwards)
+            triangle.style.strokeDashoffset = length - draw;
+            face.style.strokeDashoffset = length2 - draw2;
+
+            if (scrollpercent > 0.5) {
+                triangle.style.fill = "#0F0F0D";
+                others.style.opacity = 0.33;
+                if (scrollpercent > 0.75) {
+                    face.style.fill = "#C9A492";
+                    others.style.opacity = 0.66;
+                }
+                if (scrollpercent > 0.9) {
+                    others.style.opacity = 1;
+                }
+            } else if (scrollpercent < 0) {
+                triangle.style.strokeWidth = 0;
+                face.style.strokeWidth = 0;
+            } else {
+                triangle.style.strokeWidth = 2;
+                face.style.strokeWidth = 0.2;
+                triangle.style.fill = "none";
+                face.style.fill = "none";
+                others.style.opacity = 0;
+                if (scrollpercent > 0.25) {
+                    others.style.opacity = 0.25;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

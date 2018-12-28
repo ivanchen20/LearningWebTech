@@ -1,0 +1,14 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+h1, #title{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 5vw;
+}
+p{
+    font-size: 1.2vw;
+    text-indent: 3vw;
+    color: aliceblue;
+}
+html {
+    scroll-behavior: smooth;
+    color: aliceblue;
+}

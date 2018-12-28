@@ -1,0 +1,53 @@
+body {
+    background: linear-gradient(to top, rgba(76, 76, 76, 1) 0%, rgba(89, 89, 89, 1) 12%, rgba(102, 102, 102, 1) 25%, rgba(71, 71, 71, 1) 39%, rgba(44, 44, 44, 1) 50%, rgba(0, 0, 0, 1) 51%, rgba(17, 17, 17, 1) 60%, rgba(43, 43, 43, 1) 76%, rgba(28, 28, 28, 1) 91%, rgba(19, 19, 19, 1) 100%);
+}
+
+/*占滿版面*/
+.full{
+    height: 100vh;
+}
+
+/*用來包內容物置中*/
+#cover{
+    height: 100%; 
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/***animation and effect***/
+/*標題閃爍*/
+.shining
+{
+    background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+    -webkit-background-size: 100px;
+    color: rgba(255, 215, 0, 0.6);
+    -webkit-background-clip: text;
+    -webkit-animation-name: shine;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shine
+{
+    0%
+    {
+        background-position: top left;
+        opacity: 0.15;
+    }
+    30%{
+        background-position: top right;
+        opacity: 1
+    }
+    50%{
+        background-position: top right;
+        opacity: 1
+    }
+    100%
+    {
+        background-position: top left;
+        opacity:0.15;
+    }
+}
