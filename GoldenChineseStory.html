@@ -48,6 +48,21 @@
         div.buff{
             height: 25vh;
         }
+        #indicator {
+            margin: 0 auto;
+            z-index: 35;
+            margin-bottom: 2%;
+            width: 2rem;
+            height: 2rem;
+            border: 2px solid rgb(255,223,0);
+            border-left: none;
+            border-bottom: none;
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+            -webkit-animation: arrows 2.4s 0.3s infinite forwards;
+            animation: arrows 2.4s 0.3s infinite forwards;
+            animation-iteration-count: 2;
+        }
     </style>
 </head>
 
@@ -66,23 +81,25 @@
             <div id="cover">
                 <t id="title" class="shining">台語淵流與發展</t>
             </div>
-            <div id="indicator_scroll" align="center">
+            <div id="indicator_scroll">
                 <!--linkage behavior-->
                 <a href="#history">
-                <svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 44 44" preserveAspectRatio="xMinYMin meet" stroke="rgb(255,223,0)">
-                    <g fill="none" fill-rule="evenodd" stroke-width="1">
-                        <circle cx="22" cy="22" r="19.6468">
-                            <animate attributeName="r" begin="0s" dur="3.6s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite" />
-                            <animate attributeName="stroke-opacity" begin="0s" dur="3.6s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="22" cy="22" r="13.5288">
-                            <animate attributeName="r" begin="-2.7s" dur="5.4s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite" />
-                            <animate attributeName="stroke-opacity" begin="-2.7s" dur="5.4s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite" />
-                        </circle>
-                    </g>
-                </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 44 44" preserveAspectRatio="xMinYMin meet" stroke="rgb(255,223,0)">
+                        <g fill="none" fill-rule="evenodd" stroke-width="1">
+                            <circle cx="22" cy="22" r="19.6468">
+                                <animate attributeName="r" begin="0s" dur="3.6s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite" />
+                                <animate attributeName="stroke-opacity" begin="0s" dur="3.6s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="22" cy="22" r="13.5288">
+                                <animate attributeName="r" begin="-2.7s" dur="5.4s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite" />
+                                <animate attributeName="stroke-opacity" begin="-2.7s" dur="5.4s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
                 </a>
+                <div id="indicator"></div>
             </div>
+            
         </div>
     </section>
     <section id="history">
@@ -177,7 +194,6 @@
                 }
             }
         }
-
     </script>
 
 </body>
