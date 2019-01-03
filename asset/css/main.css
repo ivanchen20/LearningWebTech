@@ -16,6 +16,10 @@ body {
     justify-content: center;
 }
 
+/*修正bt4 row超版*/
+.row{
+    margin: 0;
+}
 
 /***animation and effect***/
 /*標題閃爍*/

@@ -5,9 +5,22 @@ h1, #title{
 }
 p{
     font-size: 1.2vw;
-    text-indent: 3vw;
+    text-indent: 2.5vw;
     color: aliceblue;
 }
+p::first-letter{
+    text-shadow: 1px 1px rgb(255,233,0,0.2);
+    font-size: 2vw;
+}
+
+p::first-line{
+    margin-top: 2vh;
+}
+
+strong{
+    color: rgb(255,223,0);
+}
+
 html {
     scroll-behavior: smooth;
     color: aliceblue;
