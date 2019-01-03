@@ -56,9 +56,35 @@ body {
     }
 }
 
+/*捲動提示*/
 @keyframes arrows {
   to {
     transform: translateY(100%) rotate(135deg);
     opacity: 0;
   }
+}
+
+/*黑膠NavBar*/
+.vinyl {
+    width:120px;
+    height:120px;
+    left: 20px;
+    top: 20px;
+    position:fixed;
+    z-index: 50;
+    background: url(../img/Vinyl3.png) top center no-repeat;
+    background-size: cover;
+    animation: spin 10s linear infinite;
+    /* initially paused */
+    animation-play-state: paused; 
+}
+
+.vinyl:hover {
+  /* running when hovering */
+  animation-play-state: running;
+}
+
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
 }
