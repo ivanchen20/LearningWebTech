@@ -88,3 +88,21 @@ body {
 @keyframes spin {
   100% {transform: rotate(1turn); }
 }
+
+/*標題後方框*/
+#trect {
+  fill: transparent;
+  stroke-width: 8px;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 0;
+  stroke: #FAFAD2;
+/*   transform: rotateY(180deg); */
+  transform-origin: 100% 0%;
+}
+
+#twrap{
+	margin: 0 auto;
+    position: fixed;
+/*    z-index: -5;*/
+    top: 12vh;
+}

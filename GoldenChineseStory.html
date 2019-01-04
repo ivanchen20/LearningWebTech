@@ -63,6 +63,25 @@
             animation: arrows 2.4s 0.3s infinite forwards;
             animation-iteration-count: 3;
         }
+        
+        @keyframes draw {
+            0% {
+                stroke-dashoffset: 2;
+                stroke-width: 8px;
+                transform: rotateZ(0deg);
+            }
+            100% {
+                stroke-dashoffset: 3990;
+                stroke-width: 0px;
+                transform: rotateZ(90deg);
+            }
+        }
+        
+        #twrap:hover #trect {
+            -webkit-animation: 3s draw linear forwards;
+            animation: 3s draw linear forwards;
+        }
+        
     </style>
 </head>
 
@@ -81,6 +100,9 @@
         <div class="full">
             <div id="cover">
                 <t id="title" class="shining">台語淵流與發展</t>
+                <svg id="twrap" height="76vh" width="76vw" xmlns="http://www.w3.org/2000/svg">
+                    <rect id="trect" height="100%" width="100%" />
+                </svg>
             </div>
             <div id="indicator_scroll">
                 <!--linkage behavior-->
@@ -100,7 +122,7 @@
                 </a>
                 <div id="indicator"></div>
             </div>
-            
+
         </div>
     </section>
     <section id="history">
@@ -114,12 +136,12 @@
             <div class="col-sm-1"></div>
             <!--line with waves, or some decoration about music-->
             <div class="col-xs-1 col-sm-3">
-                
+
             </div>
         </div>
     </section>
     <section id="compare">
-        
+
     </section>
 
     <!--to be added-->
@@ -128,17 +150,17 @@
     </section>
 
     <section id="ending">
-        
+
     </section>
-    
+
     <!-- for song playing effect -->
     <footer id="frame">
         <div class="frame-top"></div>
         <div class="frame-down"></div>
     </footer>
 
-    
-    
+
+
     <!--my JS scroll drawing-->
     <script>
         // Get the id of the <path> element and the length of <path>
