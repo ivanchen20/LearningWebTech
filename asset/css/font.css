@@ -25,3 +25,18 @@ html {
     scroll-behavior: smooth;
     color: aliceblue;
 }
+
+/*控制RWD手機行為*/
+@media screen and (max-width: 768px) {
+    p {
+      font-size:medium;
+      text-indent:20px;
+    }
+    p::first-letter{
+      font-size:x-large;
+    }
+    .vinyl{
+        width: 80px;
+        height: 80px;
+    }
+}
