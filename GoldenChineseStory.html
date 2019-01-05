@@ -33,6 +33,7 @@
         section {
             min-height: 4000px;
         }
+        
 
         #title {
             /*            font-size: 200px;*/
@@ -88,11 +89,13 @@
                 </a>
                 <div id="indicator"></div>
             </div>
-
         </div>
     </section>
     <section id="history">
-        <div class="buff"></div>
+        <!-- subtitle -->
+        <div class="buff">
+            <div id="subtitle" class="subt"></div>
+        </div>
         <div class="row">
             <div class="col-xs-1 col-sm-2"></div>
             <div class="col-xs-10 col-sm-6">
@@ -115,9 +118,38 @@
         <article></article>
     </section>
 
-    <section id="ending">
-
-    </section>
+    <!--    <section id="ending">-->
+    <div class="full">
+        <div id="cover" class="text-center">
+            <div class="col-sm-1"></div>
+            <div id="report" class="col-xs-12 col-sm-4 text-right">
+                <p class="shining">高庭萱</p>
+                <p class="shining" style=" padding-right: 1vw;">陳世運</p>
+                <p class="shining">許毅全</p>
+            </div>
+            <div class="col-sm-2">
+                <a href="#history">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 44 44" preserveAspectRatio="xMinYMin meet" stroke="rgb(255,223,0)">
+                        <g fill="none" fill-rule="evenodd" stroke-width="1">
+                            <circle cx="22" cy="22" r="19.6468">
+                                <animate attributeName="r" begin="0s" dur="3.6s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite" />
+                                <animate attributeName="stroke-opacity" begin="0s" dur="3.6s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="22" cy="22" r="13.5288">
+                                <animate attributeName="r" begin="-2.7s" dur="5.4s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite" />
+                                <animate attributeName="stroke-opacity" begin="-2.7s" dur="5.4s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div id="report" class="col-xs-12 col-sm-4 text-left">
+                <p class="shining">整理報導</p>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+    <!--    </section>-->
 
     <!-- for song playing effect -->
     <footer id="frame">
