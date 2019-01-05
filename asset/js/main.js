@@ -17,5 +17,26 @@ $(document).ready(function(){
             $('#indicator_scroll').fadeIn('slow');
         }
     }); 
+    
+    
+    
+    
+    // click and hover event: Nav
+    
+//    var isNavOpen = false;
+//    
+//    $(".vinyl").click(function(){
+//        if(isNavOpen){
+//            $(".navlist").css("display", "none");
+//        }else{
+//            $(".navlist").css("display", "block");   
+//        }
+//        isNavOpen = !isNavOpen;
+//        console.log(isNavOpen);
+//    });
+    $(".vinyl").hover(function(){
+        $(".navlist").toggle(function(){
+        });
+    });
 });
 

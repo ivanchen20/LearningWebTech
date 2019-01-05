@@ -1,24 +1,28 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-h1, #title{
+
+h1,
+#title {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 5vw;
 }
-p{
+
+p {
     font-size: 1.2vw;
     text-indent: 2.5vw;
     color: aliceblue;
 }
-p::first-letter{
-    text-shadow: 1px 1px rgb(255,233,0,0.2);
+
+p::first-letter {
+    text-shadow: 1px 1px rgb(255, 233, 0, 0.2);
     font-size: 2vw;
 }
 
-p::first-line{
+p::first-line {
     margin-top: 2vh;
 }
 
-strong{
-    color: rgb(255,223,0);
+strong {
+    color: rgb(255, 223, 0);
 }
 
 html {
@@ -26,17 +30,41 @@ html {
     color: aliceblue;
 }
 
+nav ul {
+    color: rgb(255, 223, 0);
+    position: fixed;
+    list-style-type: none;
+    font-size: large;
+    top: 42px;
+    left: 120px;
+    font-family: 'Noto Sans TC', sans-serif;
+    
+    display: none;
+}
+
+nav ul li:nth-child(2) {
+    text-indent: 5px;
+}
+
 /*控制RWD手機行為*/
 @media screen and (max-width: 768px) {
     p {
-      font-size:medium;
-      text-indent:20px;
+        font-size: medium;
+        text-indent: 20px;
     }
-    p::first-letter{
-      font-size:x-large;
+
+    p::first-letter {
+        font-size: x-large;
     }
-    .vinyl{
+
+    .vinyl {
         width: 80px;
         height: 80px;
+    }
+
+    nav ul {
+        font-size: medium;
+        top: 28px;
+        left: 70px;
     }
 }
