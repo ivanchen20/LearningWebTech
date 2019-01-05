@@ -51,6 +51,18 @@ nav ul li:nth-child(2) {
     text-indent: 5px;
 }
 
+/*Link變化控制*/
+a{
+    color: inherit;
+}
+
+a:hover, a:focus{
+    color: aliceblue;
+    text-decoration: none;
+    transform: scale(1.5);
+}
+
+
 /*控制RWD手機行為*/
 @media screen and (max-width: 768px) {
     p {

@@ -23,17 +23,18 @@ $(document).ready(function(){
     
     // click and hover event: Nav
     
-//    var isNavOpen = false;
-//    
-//    $(".vinyl").click(function(){
-//        if(isNavOpen){
-//            $(".navlist").css("display", "none");
-//        }else{
-//            $(".navlist").css("display", "block");   
-//        }
-//        isNavOpen = !isNavOpen;
-//        console.log(isNavOpen);
-//    });
+    var isNavOpen = false;
+    
+    $(".vinyl").click(function(){
+        if(isNavOpen){
+            $(".navlist_fake").css("display", "none");
+        }else{
+            $(".navlist_fake").css("display", "block");   
+        }
+        isNavOpen = !isNavOpen;
+        console.log(isNavOpen);
+    });
+
     $(".vinyl").hover(function(){
         $(".navlist").toggle(function(){
         });
