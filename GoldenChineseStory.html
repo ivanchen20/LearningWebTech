@@ -38,48 +38,9 @@
             /*            font-size: 200px;*/
             text-align: center;
         }
-        #indicator_scroll{
-            position: fixed;
-            z-index: 30;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-        }
+        
         div.buff{
             height: 25vh;
-        }
-        #indicator {
-            margin: 0 auto;
-            z-index: 35;
-            margin-bottom: 2%;
-            width: 2rem;
-            height: 2rem;
-            border: 2px solid rgb(255,223,0);
-            border-left: none;
-            border-bottom: none;
-            -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-            -webkit-animation: arrows 2.4s 0.3s infinite forwards;
-            animation: arrows 2.4s 0.3s infinite forwards;
-            animation-iteration-count: 3;
-        }
-        
-        @keyframes draw {
-            0% {
-                stroke-dashoffset: 2;
-                stroke-width: 8px;
-                transform: rotateZ(0deg);
-            }
-            100% {
-                stroke-dashoffset: 3990;
-                stroke-width: 0px;
-                transform: rotateZ(90deg);
-            }
-        }
-        
-        #twrap:hover #trect {
-            -webkit-animation: 3s draw linear forwards;
-            animation: 3s draw linear forwards;
         }
         
     </style>

@@ -11,6 +11,9 @@ $(document).ready(function(){
         if ($(this).scrollTop() > 500) {
             $('#indicator_scroll').fadeOut("slow");
         }else{
+            if($(this).scrollTop()>50){
+                $("#trect").css("animation-play-state", "running");
+            }
             $('#indicator_scroll').fadeIn('slow');
         }
     }); 
