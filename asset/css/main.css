@@ -189,7 +189,7 @@ body {
 /*上浮動畫*/
 .slideanim {
     visibility: hidden;
-    margin-bottom: 15vh;
+    margin-bottom: 3vh;
 }
 
 .slide {

@@ -19,13 +19,7 @@
     <link rel="stylesheet" type="text/css" href="asset/css/font.css">
     <!-- environment -->
     <style>
-        #mySVG {
-            position: fixed;
-            z-index: 2;
-            top: 0%;
-            width: 40vw;
-            height: 100vh;
-        }
+        
 
         #jiang-hue,
         #huang-iling,#sun {
@@ -66,6 +60,18 @@
             margin-left: 90vw;
             border-left: 6px solid aliceblue;
             height: 100vh;
+        }
+        
+        div.timeline{
+            position: fixed;
+            z-index: 0;
+            top: 0;
+            right: 0;
+            width: 10vw;
+            height: 150vh;
+            margin-left: 90vw;
+            border-left: 6px solid aliceblue;
+            
         }
         
     </style>
@@ -123,20 +129,19 @@
     </section>
     <section id="history">
         <!-- subtitle -->
-        <div class="buff">
-            <div id="subtitle" class="subt">源流</div>
-        </div>
+        <div id="subtitle" class="subt">源流</div>
+        <div class="timeline"></div>
         <div class="row">
             <div class="col-xs-1 col-sm-2"></div>
             <div class="col-xs-10 col-sm-6">
-                <p><strong>故事主要內容區塊</strong></p>
-                <p>測試文字：設計的訣竅：用戶體驗、業界做法（評估、分析）；面試產品經理，所問的問題（背後的邏輯？）Taipei 101 改版設計，找出3個可優化之處。問出經驗：專業的三個角度（用戶、數據、設計）不要直接跳到那個題目去做！！直接回答3個就慘了。用戶通常說他想做什麼，但她不太理解其實。</p>
+                <div class="buff"></div>
+                <p class="slideanim sShow"><strong>早期</strong></p>
+                <p class="slideanim">記載早期移民的過程，例如流傳在瑯嶠（恆春）的〈台東調〉裡，寫了希望去到台東之後能夠被在地的原住民所接受的心情：「希望阿娘來痛疼 痛疼阿哥出外人」。</p>
+                <p class="slideanim">歌仔冊除了愛情故事如英台、陳三五娘之外，也有《周成過台灣》、《台灣民主歌》這類類似史詩的歌曲</p>
             </div>
             <div class="col-sm-1"></div>
             <!--line with waves, or some decoration about music-->
-            <div class="col-xs-1 col-sm-3">
-
-            </div>
+            <div class="col-xs-1 col-sm-3"></div>
         </div>
     </section>
     <section id="compare">

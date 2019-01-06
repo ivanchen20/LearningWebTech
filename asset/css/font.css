@@ -6,7 +6,7 @@ h1,
     font-size: 5vw;
 }
 
-h2{
+h2 {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 3vw;
 }
@@ -43,7 +43,7 @@ nav ul {
     top: 42px;
     left: 120px;
     font-family: 'Noto Sans TC', sans-serif;
-    
+
     display: none;
 }
 
@@ -52,16 +52,33 @@ nav ul li:nth-child(2) {
 }
 
 /*Link變化控制*/
-a{
+a {
     color: inherit;
 }
 
-a:hover, a:focus{
+a:hover,
+a:focus {
     color: aliceblue;
     text-decoration: none;
     transform: scale(1.5);
 }
 
+/*螢幕隱藏或顯示*/
+.sShow {
+    display: none;
+}
+
+.sHide {
+    display: block;
+}
+
+#mySVG {
+    position: fixed;
+    z-index: 2;
+    top: 0%;
+    width: 40vw;
+    height: 100vh;
+}
 
 /*控制RWD手機行為*/
 @media screen and (max-width: 768px) {
@@ -73,15 +90,15 @@ a:hover, a:focus{
     p::first-letter {
         font-size: x-large;
     }
-    
-    div#report p{
+
+    div#report p {
         text-indent: 0px;
     }
-    
-    h2{
+
+    h2 {
         font-size: medium;
     }
- 
+
     .vinyl {
         width: 80px;
         height: 80px;
@@ -92,13 +109,22 @@ a:hover, a:focus{
         top: 28px;
         left: 70px;
     }
-    
+
     #mySVG {
         position: fixed;
         z-index: -2;
-        top:0%;
+        top: 0%;
         width: 100vw;
         height: 100vh;
         opacity: 0.2;
+    }
+
+    /*用於小螢幕隱藏的class*/
+    .sHide {
+        display: none;
+    }
+
+    .sShow {
+        display: block;
     }
 }
