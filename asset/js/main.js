@@ -4,12 +4,9 @@ $(document).ready(function () {
     var tlng = trect.getTotalLength();
     trect.style.strokeDasharray = tlng;
     trect.style.strokeDashoffset = 0;
-
-
+    
+    // main scroll
     $(window).scroll(function () {
-                
-        
-        
         if ($(this).scrollTop() > 500) {
             $('#indicator_scroll').fadeOut("slow");
             $("#trect").css("animation-play-state", "running");
@@ -37,9 +34,31 @@ $(document).ready(function () {
         });
     });
 
+    //svg shrink scroll
+    
+    //timeline scroll    
+    var timeline_base_top = $("#timeline_showing").offset().top-$(window).innerHeight();
+    var timeline_base = $("#timeline_showing").height();
+    var timeline_base_bottom = $("#timeline_showing").height() + timeline_base_top;
+    
+    $(window).scroll(timelineHandler);
+    
+    function timelineHandler(e){
+        if($(this).scrollTop()>timeline_base_top/2 && $(this).scrollTop()<timeline_base_bottom*2){
+            timeline_top = 100-100*($(this).scrollTop()- timeline_base_top)/timeline_base;
+            if(timeline_top<=0){
+                timeline_top=0;
+            }else if(timeline_top>=100){
+                timeline_top=100;
+            }
+            console.log(timeline_top);
+            $(".timeline").css("top", timeline_top+"vh");
+        }
+    }
 
-
-
+    
+    
+    
     // click and hover event: Nav
 
     var isNavOpen = false;
