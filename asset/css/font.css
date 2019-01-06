@@ -38,6 +38,7 @@ html {
 nav ul {
     color: rgb(255, 223, 0);
     position: fixed;
+    z-index: 30;
     list-style-type: none;
     font-size: large;
     top: 42px;
