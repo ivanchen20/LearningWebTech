@@ -24,6 +24,17 @@ h2 {
     font-size: 3vw;
 }
 
+h3 {
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: center;
+    color: rgb(230, 190, 138);
+}
+
 p {
     font-size: 1.2vw;
     text-indent: 2.5vw;
