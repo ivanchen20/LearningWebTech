@@ -92,4 +92,13 @@ a:hover, a:focus{
         top: 28px;
         left: 70px;
     }
+    
+    #mySVG {
+        position: fixed;
+        z-index: -2;
+        top:0%;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.2;
+    }
 }
