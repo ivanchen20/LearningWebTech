@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     //svg shrink scroll
     
-    //timeline scroll    
+    /***timeline scroll***/    
     var timeline_base_top = $("#timeline_showing").offset().top-$(window).innerHeight();
     var timeline_base = $("#timeline_showing").height();
     var timeline_base_bottom = $("#timeline_showing").height() + timeline_base_top;
