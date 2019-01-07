@@ -1,8 +1,10 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+SC|ZCOOL+QingKe+HuangYou');
 
 h1,
 #title {
-    font-family: 'Noto Sans TC', sans-serif;
+/*    font-family: 'Noto Sans TC', sans-serif;*/
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
     font-size: 5vw;
 }
 
@@ -13,20 +15,22 @@ h1,
     text-align: right;
     width: 30%;
     color: aliceblue;
-    font-size: 2.5vw;
-    font-family: 'Noto Sans TC', sans-serif;
-
-    display: none;
+/*    font-size: 2.5vw;*/
+/*    font-family: 'Noto Sans TC', sans-serif;*/
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 3vw;
+/*    display: none;*/
 }
 
 h2 {
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 3vw;
+    font-size: 3.5vw;
 }
 
 h3 {
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Sans SC', 'Noto Sans', 'Noto Sans TC', sans-serif;
     text-align: center;
+    font-size: 3vw;
 }
 
 h4 {
@@ -36,6 +40,7 @@ h4 {
 }
 
 p {
+    font-family: 'Noto Sans SC', 'Noto Sans', sans-serif;
     font-size: 1.2vw;
     text-indent: 2.5vw;
     color: aliceblue;
