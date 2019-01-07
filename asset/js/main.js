@@ -108,6 +108,31 @@ $(document).ready(function () {
         }
     }
 
+    /***svg scroll***/
+    var svg1end = $("#mySVG1_end").offset().top;
+    var svg2end = $("#mySVG2_end").offset().top;
+    $(window).scroll(svg1Handler);
+    $(window).scroll(svg2Handler);
+    
+    function svg1Handler(e){
+        if($(this).scrollTop()>svg1end){
+            $("#mySVG1").addClass("svgShrink");
+        }
+        else{
+            $("#mySVG1").removeClass("svgShrink");
+        }
+    }
+    
+    function svg2Handler(e){
+        if($(this).scrollTop()>svg2end){
+            $("#mySVG2").addClass("svgShrink");
+        }
+        else{
+            $("#mySVG2").removeClass("svgShrink");
+        }
+    }
+    
+    
     
     
     
