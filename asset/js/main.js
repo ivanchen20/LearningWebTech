@@ -65,7 +65,7 @@ $(document).ready(function () {
                 }
             }
             else{
-                if(!$("#subtitle-1").hasClass("disappear")){                    
+                if(!$("#subtitle-2").hasClass("disappear")){                    
                     $("#subtitle-2").addClass("disappear").delay(1000).queue(function(){
                         $(this).removeClass("appear").removeClass("disappear").dequeue();
                     });

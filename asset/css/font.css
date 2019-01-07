@@ -102,7 +102,7 @@ a:focus {
     display: block;
 }
 
-#mySVG {
+.mySVG {
     position: fixed;
     z-index: 2;
     top: 0%;
@@ -140,7 +140,7 @@ a:focus {
         left: 70px;
     }
 
-    #mySVG {
+    .mySVG {
         position: fixed;
         z-index: -2;
         top: 0%;
