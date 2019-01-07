@@ -23,7 +23,7 @@
 
         #jiang-hue,
         #huang-iling,#sun {
-            min-height: 200vh;
+            min-height: 100vh;
         }
 
         section {
@@ -62,6 +62,11 @@
             transition: transform 1s ease-in-out, border-left-color 0.5s ease-in-out 0.1s;
         }
         
+        .timeline_skew{
+            transform: translateX(-22vw) rotate(45deg) translateX(-22vw);
+            border-left-color: rgb(255, 223, 0);
+        }
+        
         div#timeline:active{
             transform: translateX(-22vw) rotate(45deg) translateX(-22vw);
             border-left-color: rgb(255, 223, 0);
@@ -74,9 +79,12 @@
         }
 */
         
-        .timeline_skew{
-            transform: translateX(-22vw) rotate(45deg) translateX(-22vw);
-            border-left-color: rgb(255, 223, 0);
+        .mySVG{
+            transition: transform 2s ease-in-out;
+        }
+        
+        .svgShrink{
+            transform: translateX(-20vw) rotateY(90deg) scale(0);
         }
         
         #singername{
@@ -280,7 +288,6 @@
                 <p class="slideanim sShow" style="text-align: right; text-indent: 0"><strong>今</strong></p>
             </div>
         </div>
-        <div class="buff"></div>
     </section>
 
     <!--to be added-->
@@ -1096,7 +1103,7 @@
             <!--line with waves, or some decoration about music-->
             <div class="col-xs-1 col-sm-2"></div>
         </div>
-        <div id="mySVG_end" class="buff"></div>
+        <div id="mySVG1_end" class="buff"></div>
         
         <!--2-->
         <div id="huang-iling">
@@ -2344,7 +2351,7 @@
             <!--line with waves, or some decoration about music-->
             <div class="col-xs-1 col-sm-2"></div>
         </div>
-        <div class="buff"></div>
+        <div id="mySVG2_end" class="buff"></div>
         
         <!--3-->
         <div id="jiang-hue">
