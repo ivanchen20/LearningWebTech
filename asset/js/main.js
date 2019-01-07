@@ -34,7 +34,47 @@ $(document).ready(function () {
         });
     });
 
-    //svg shrink scroll
+    /***title scroll***/
+    var subt1_top = $("#history").offset().top-$(window).innerHeight();
+    var subt1_bottom = $("#history").height() + subt1_top;
+    
+    var subt2_top = $("#singer").offset().top-$(window).innerHeight();
+    var subt2_bottom = $("#singer").height() + subt2_top;
+    
+    $(window).scroll(subtitleHandler);
+    
+    function subtitleHandler(e){
+        if($(this).scrollTop()>subt1_top/2 && $(this).scrollTop()<subt1_bottom+$(window).innerHeight()*2){
+            if($(this).scrollTop()>subt1_top && $(this).scrollTop()<subt1_bottom+$(window).innerHeight()){
+                if(!$("#subtitle-1").hasClass("appear")){
+                    $("#subtitle-1").addClass("appear");
+                }
+            }
+            else{
+                if(!$("#subtitle-1").hasClass("disappear")){                    
+                    $("#subtitle-1").addClass("disappear").delay(1000).queue(function(){
+                        $(this).removeClass("appear").removeClass("disappear").dequeue();
+                    });
+                }
+            }
+        }
+        if($(this).scrollTop()>subt2_top-$(window).innerHeight() && $(this).scrollTop()<subt2_bottom+$(window).innerHeight()){
+            if($(this).scrollTop()>subt2_top && $(this).scrollTop()<subt2_bottom){
+                if(!$("#subtitle-2").hasClass("appear")){
+                    $("#subtitle-2").addClass("appear");
+                }
+            }
+            else{
+                if(!$("#subtitle-1").hasClass("disappear")){                    
+                    $("#subtitle-2").addClass("disappear").delay(1000).queue(function(){
+                        $(this).removeClass("appear").removeClass("disappear").dequeue();
+                    });
+                }
+            }
+        }
+        
+    }
+    
     
     /***timeline scroll***/    
     var timeline_base_top = $("#timeline_showing").offset().top-$(window).innerHeight();

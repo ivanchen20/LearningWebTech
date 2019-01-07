@@ -223,3 +223,59 @@ body {
         -webkit-transform: translateY(0%);
     }
 }
+
+/*左方顯現動畫*/
+.appearanim {
+    visibility:hidden;
+}
+.appearanim.appear {                  
+    visibility: visible;                  
+    animation: appear 1s;
+    -webkit-animation: appear 1s;
+}
+.appearanim.disappear {                                    
+    animation: disappear 1s;
+    -webkit-animation: disappear 1s;
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+}
+
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+}

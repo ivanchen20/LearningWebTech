@@ -59,7 +59,7 @@
             height: 150vh;
             margin-left: 90vw;
             border-left: 6px solid aliceblue;
-            transition: transform 1s ease-in-out, border-left-color 2s linear 0.5s;
+            transition: transform 1s ease-in-out, border-left-color 0.5s ease-in-out 0.1s;
         }
         
         div#timeline:active{
@@ -77,6 +77,10 @@
         .timeline_skew{
             transform: translateX(-22vw) rotate(45deg) translateX(-22vw);
             border-left-color: rgb(255, 223, 0);
+        }
+        
+        #singername{
+            
         }
         
     </style>
@@ -137,7 +141,7 @@
     
     <section id="history">
         <!-- subtitle -->
-        <div id="subtitle" class="subt">源流</div>
+        <div id="subtitle-1" class="subt appearanim">源流</div>
         <div class="row">
             <div class="col-xs-1 col-sm-2"></div>
             <div class="col-xs-10 col-sm-6">
@@ -282,7 +286,7 @@
     <!--to be added-->
     <section id="singer">
         <!-- subtitle -->
-        <div id="subtitle" class="subt">歌手介紹</div>
+        <div id="subtitle-2" class="subt appearanim">歌手介紹</div>
 
         <!--1-->
         <div id="sun">
@@ -1051,13 +1055,13 @@
                 <div class="buff"></div>
 <!--                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>2005年獲金曲獎，獲獎年紀最輕</strong></p>-->
                 <h3 class="slideanim"><strong>2005年獲金曲獎，獲獎年紀最輕</strong></h3>
-                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>音樂對於她而言，就像是生活一樣不可或缺，<br>所以每天眼睛一睜開就是音樂。</strong></p>
+                <p class="slideanim" style="text-align: center; text-indent: 0; text-decoration: underline"><strong>音樂對於她而言，就像是生活一樣不可或缺，<br>所以每天眼睛一睜開就是音樂。</strong></p>
 <!--                <h4 class="slideanim">音樂對於她而言，就像是生活一樣不可或缺，<br>所以每天眼睛一睜開就是音樂。</h4>-->
                 <div class="buff"></div>
             </div>
             <!--line with waves, or some decoration about music-->
             <div class="col-xs-1 col-sm-2">
-                <p class="slideanim" style="text-indent: 0;"><strong>孫淑媚</strong></p>
+                <p id="singername" class="slideanim" style="text-indent: 0;"><strong>孫淑媚</strong></p>
             </div>
         </div>
         <div class="row">
@@ -2294,14 +2298,14 @@
                 <div class="buff"></div>
 <!--                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>2005年獲金曲獎，獲獎年紀最輕</strong></p>-->
                 <h3 class="slideanim"><strong>金曲獎最佳台語女歌手得獎4次</strong></h3>
-                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>若要形容36歲前的她，最貼切的詞就是「難搞」
+                <p class="slideanim" style="text-align: center; text-indent: 0;text-decoration: underline"><strong>若要形容36歲前的她，最貼切的詞就是「難搞」
 </strong></p>
 <!--                <h4 class="slideanim">音樂對於她而言，就像是生活一樣不可或缺，<br>所以每天眼睛一睜開就是音樂。</h4>-->
                 <div class="buff"></div>
             </div>
             <!--line with waves, or some decoration about music-->
             <div class="col-xs-1 col-sm-2">
-                <p class="slideanim" style="text-indent: 0;"><strong>黃乙玲</strong></p>
+                <p id="singername" class="slideanim" style="text-indent: 0;"><strong>黃乙玲</strong></p>
             </div>
         </div>
         <div class="row">
@@ -2309,7 +2313,10 @@
             <div class="col-xs-10 col-sm-6">
                 <div class="buff"></div>
                 <p class="slideanim">由於成名得早，專輯張張大賣造就她我行我素，對同行也很冷漠，因為「保持距離，比較有大牌架勢」。</p>
-                <p class="slideanim">她不主動跟人打招呼，不高興就取消通告，「我不發脾氣，只使眼色，宣傳排通告，我不滿意就直接走人、關機3天，讓他們收拾殘局」。「我只用指定的化妝師，有次拍MV，景都搭好了，但化妝師臨時有事，他們安排別人，我覺得不自在，當場告辭。」還說：「當時覺得，這是藝人敬業的表現。」 </p>
+                <p class="slideanim">她不主動跟人打招呼，不高興就取消通告。</p>
+                <p class="slideanim">「我不發脾氣，只使眼色，宣傳排通告，我不滿意就直接走人、關機3天，讓他們收拾殘局。」</p>
+                <p class="slideanim">「我只用指定的化妝師，有次拍MV，景都搭好了，但化妝師臨時有事，他們安排別人，我覺得不自在，當場告辭。」</p>
+                <p class="slideanim">「當時覺得，這是藝人敬業的表現。」 </p>
                 <div class="buff"></div>
             </div>
             <!--line with waves, or some decoration about music-->
@@ -2319,7 +2326,7 @@
             <div class="col-xs-1 col-sm-4"></div>
             <div class="col-xs-10 col-sm-6">
                 <div class="buff"></div>
-                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>讓她從「難搞」變「溫和」的轉捩點發生在9年前，「爸爸生病、親戚自殺，我開始思考活著的意義」。</strong></p>
+                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>讓她從「難搞」變「溫和」的轉捩點發生在9年前...</strong><br><strong>「爸爸生病、親戚自殺，我開始思考活著的意義」。</strong></p>
                 <div class="buff"></div>
             </div>
             <!--line with waves, or some decoration about music-->
@@ -2598,13 +2605,13 @@
                 <div class="buff"></div>
 <!--                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>2005年獲金曲獎，獲獎年紀最輕</strong></p>-->
                 <h3 class="slideanim"><strong>金曲獎5次獲獎紀錄，獲獎次數最多</strong></h3>
-                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>「每個臺灣人心中都有一首江蕙的歌。」</strong></p>
+                <p class="slideanim" style="text-align: center; text-indent: 0;text-decoration: underline"><strong>「每個臺灣人心中都有一首江蕙的歌。」</strong></p>
 <!--                <h4 class="slideanim">音樂對於她而言，就像是生活一樣不可或缺，<br>所以每天眼睛一睜開就是音樂。</h4>-->
                 <div class="buff"></div>
             </div>
             <!--line with waves, or some decoration about music-->
             <div class="col-xs-1 col-sm-2">
-                <p class="slideanim" style="text-indent: 0;"><strong>江蕙</strong></p>
+                <p id="singername" class="slideanim" style="text-indent: 0;"><strong>江蕙</strong></p>
             </div>
         </div>
         <div class="row">
@@ -2613,6 +2620,18 @@
                 <div class="buff"></div>
                 <p class="slideanim"><strong>唱歌不是江蕙的夢想，帶著江蕙走入歌壇的，是現實與命運。</strong></p>
                 <p class="slideanim">10歲起江蕙靠著在那卡西、三重茶室等地四處走唱，成為家中經濟的最大支柱。同齡小孩在上學無憂無慮的年紀，她卻已經看遍人情冷暖，江蕙曾悠悠地說：「我很小就很會看人臉色，這也是可憐。」</p>
+                <div class="buff"></div>
+            </div>
+            <!--line with waves, or some decoration about music-->
+            <div class="col-xs-1 col-sm-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-4"></div>
+            <div class="col-xs-10 col-sm-6">
+                <div class="buff"></div>
+                <p class="slideanim"><strong>成名以後，江蕙並沒有因為今天的成功而有所鬆懈。</strong></p>
+                <p class="slideanim">演唱會前，她總因壓力過大，會因為唱歌多唱了一個轉音、多了一拍，明明觀眾沒聽出來，回家以後會自責，偷偷落淚。</p>
+                <p class="slideanim">提拔他的貴人黃益雄說：「我配合江蕙，他為什麼讓人感動？因為他苦過。我做電視45年了，我看過多少人，他沒有幸運，他完全靠他自己。」</p>
                 <div class="buff"></div>
             </div>
             <!--line with waves, or some decoration about music-->
@@ -2634,19 +2653,7 @@
             <div class="col-xs-1 col-sm-4"></div>
             <div class="col-xs-10 col-sm-6">
                 <div class="buff"></div>
-                <p class="slideanim">經朋友介紹，她接觸佛學，慢慢找到答案。</p>
-                <p class="slideanim">「曾自以為有成就，什麼事都怪別人，那時的我覺得唱歌很不快樂，認為不唱才能獲得自由；接觸佛學後，我學會反省、看到自己的問題」。</p>
-                <p class="slideanim">懂得慈悲為懷，更讓她勇於面對未婚生女秘密被揭露的處境，近年更因佛法薰陶，拉近和女兒小雲的距離。</p>
-                <div class="buff"></div>
-            </div>
-            <!--line with waves, or some decoration about music-->
-            <div class="col-xs-1 col-sm-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-xs-1 col-sm-4"></div>
-            <div class="col-xs-10 col-sm-6">
-                <div class="buff"></div>
-                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>2015年，江蕙無預警宣布退出歌壇，在演藝圈投下一顆震撼彈，封麥原因：10多年來飽受眩暈症所苦，才決定在演藝生涯的巔峰宣告退隱。</strong></p>
+                <p class="slideanim" style="text-align: center; text-indent: 0"><strong>2015年，江蕙無預警宣布退出歌壇，在演藝圈投下一顆震撼彈</strong><br><strong>封麥原因：10多年來飽受眩暈症所苦，才決定在演藝生涯的巔峰宣告退隱。</strong></p>
                 <div class="buff"></div>
             </div>
             <!--line with waves, or some decoration about music-->
