@@ -41,6 +41,9 @@ $(document).ready(function () {
     var timeline_base = $("#timeline_showing").height();
     var timeline_base_bottom = $("#timeline_showing").height() + timeline_base_top;
     
+    var compare_top = $("#compare").offset().top; // - 0.1 * $(window).innerHeight()
+    var compare_bottom = $("#compare").height()+compare_top;
+    
     $(window).scroll(timelineHandler);
     
     function timelineHandler(e){
@@ -52,7 +55,16 @@ $(document).ready(function () {
                 timeline_top=100;
             }
             console.log(timeline_top);
-            $(".timeline").css("top", timeline_top+"vh");
+            $("#timeline").css("top", timeline_top+"vh");
+        }
+        if($(this).scrollTop()>compare_top-$(window).innerHeight() && $(this).scrollTop()<compare_bottom+$(window).innerHeight()){
+            console.log(compare_top);
+           if($(this).scrollTop()<compare_top + 0.2 * $(window).innerHeight() && $(this).scrollTop()>compare_top){
+               $("#timeline").addClass("timeline_skew");
+           }
+            else{
+                $("#timeline").removeClass("timeline_skew");
+            }
         }
     }
 

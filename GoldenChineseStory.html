@@ -30,7 +30,7 @@
             min-height: 400vh;
         }
         
-        section#start{
+        section#start, section#compare{
             min-height: 200vh;
         }
 
@@ -50,7 +50,7 @@
             height: 100vh;
         }
         
-        div.timeline{
+        div#timeline{
             position: fixed;
             z-index: 0;
             top: 100vh;
@@ -59,6 +59,24 @@
             height: 150vh;
             margin-left: 90vw;
             border-left: 6px solid aliceblue;
+            transition: transform 1s ease-in-out, border-left-color 2s linear 0.5s;
+        }
+        
+        div#timeline:active{
+            transform: translateX(-22vw) rotate(45deg) translateX(-22vw);
+            border-left-color: rgb(255, 223, 0);
+        }
+        
+/*
+        .timeline_vertical{
+            transform: translateX(0vw) rotate(0deg) translateX(0vw);
+            border-left-color: aliceblue;
+        }
+*/
+        
+        .timeline_skew{
+            transform: translateX(-22vw) rotate(45deg) translateX(-22vw);
+            border-left-color: rgb(255, 223, 0);
         }
         
     </style>
@@ -115,7 +133,7 @@
         <div class="showline"></div>
     </section>
     
-    <div class="timeline"></div>
+    <div id="timeline"></div>
     
     <section id="history">
         <!-- subtitle -->
@@ -2660,7 +2678,7 @@
                 <p class="shining">許毅全</p>
             </div>
             <div class="col-sm-2">
-                <a href="#history">
+                <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 44 44" preserveAspectRatio="xMinYMin meet" stroke="rgb(255,223,0)">
                         <g fill="none" fill-rule="evenodd" stroke-width="1">
                             <circle cx="22" cy="22" r="19.6468">
