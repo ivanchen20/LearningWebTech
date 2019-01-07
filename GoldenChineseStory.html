@@ -84,11 +84,13 @@
 */
         
         .mySVG{
-            transition: transform 2s ease-in-out;
+            transition: transform 2s ease-in-out 0.5s, opacity 1s ease-in-out;
         }
         
         .svgShrink{
-            transform: translateX(-20vw) rotateY(90deg) scale(0);
+/*            transform: translateX(-20vw) rotateY(90deg) scale(0);*/
+            transform: translateX(-10vw) rotateY(45deg) scale(1.414);
+            opacity: 0.1;
         }
         
         #singername{
@@ -121,7 +123,7 @@
         <div class="full">
             <div id="cover">
                 <t id="title" class="shining_highlight">金曲</t>
-                <t id="title" class="shining">看台語淵流與發展</t>
+                <t id="title" class="shining">看台語歌淵流與發展</t>
                 <svg id="twrap" height="76vh" width="76vw" xmlns="http://www.w3.org/2000/svg">
                     <rect id="trect" height="100%" width="100%" />
                 </svg>
