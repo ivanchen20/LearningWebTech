@@ -108,6 +108,13 @@ a:focus {
     top: 0%;
     width: 40vw;
     height: 100vh;
+    
+    transition: transform 2s ease-in-out 0.5s, opacity 1s ease-in-out;
+}
+
+.svgShrink{
+    transform: translateX(-10vw) rotateY(45deg) scale(1.414);
+    opacity: 0.05;
 }
 
 /*控制RWD手機行為*/
@@ -148,7 +155,12 @@ a:focus {
         height: 100vh;
         opacity: 0.2;
     }
-
+    
+    .svgShrink{
+        transform: translateX(-50vw) rotateY(90deg) scale(0);
+        opacity: 0;
+    }
+    
     /*用於小螢幕隱藏的class*/
     .sHide {
         display: none;
